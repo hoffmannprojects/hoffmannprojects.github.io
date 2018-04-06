@@ -1,0 +1,65 @@
+title: Tim Hoffmann # your site title
+author: Tim Hoffmann
+email: your-email@domain.com # email for form submission, you also have to change it in _js/scripts.js
+description: > # this means to ignore newlines until "baseurl:"
+  Online portfolio of Tim Hoffmann, programmer and producer. Digital games + digital media.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: timdhoffmann # replace with your_twitter_username or comment to remove link from footer
+github_username:  hoffmannprojects # replace with your_github_username or comment to remove link from footer
+# instagram_username: shanlongjj # replace with your_instagram_username or comment to remove link from footer
+social:
+  name: Tim Hoffmann
+  links:
+    - https://twitter.com/timdhoffmann
+#    - https://www.facebook.com/ben.balter
+    - https://www.linkedin.com/in/timdhoffmann
+#    - https://plus.google.com/+BenBalter
+    - https://github.com/hoffmannprojects
+#    - https://keybase.io/benbalter
+
+disqus:
+  shortname:  # to enable comments replace with your_disqus_shortname
+
+# Build settings
+markdown: kramdown
+highlighter: rouge # or pygments or null
+theme: jekyll-sleek
+exclude:
+  - README.md
+  - node_modules
+  - script
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - npm-debug.log
+  - gulpfile.js
+  - sleek.jpg
+
+include: ['_pages']
+permalink: /:title/
+
+compress_html:
+  clippings: all
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Custom collections
+collections:
+  portfolio:
+    output: true
+
+# Custom parent directory for all collections
+collections_dir: content_collections
+
+# Default attributes
+defaults:
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: portfolio-item
