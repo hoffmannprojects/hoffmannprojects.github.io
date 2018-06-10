@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: about-minimal
 title: About me
+featured-img: tim
 ---
 
 Highly proactive and creative professional with interdisciplinary education and experience in the fields of technology, design and business in the media industry. 10 years’ experience in managing digital media projects including print, web, film/animation, music and software development. 3 years’ experience in a media agency. Over 6 years’ experience as a digital media producer in the highly digitalized, consumer- focused music industry. Experience in mobile game development in a small team. Lifelong learner. Exceptional at critical analysis and finding creative solutions for products, communication and workflows. Strong communicational and social skills.
@@ -38,8 +39,10 @@ Highly proactive and creative professional with interdisciplinary education and 
 - Introduced an automated, standardized workflow with quality control for the creation of production files. My partner company was able to create the files in less than half the time it took before while reducing the error rate significantly.
 
 ## PROFESSIONAL DEVELOPMENT
-- Udemy.com course “The Unreal Engine Developer Course”, present
-- Udemy.com course **“Complete C# Unity Developer”** [Certificate of Completion](https://www.udemy.com/certificate/UC-ZBJAK2VK/)
+- Udemy course **"A Beginner's Guide To Machine Learning with Unity"**, present
+- Udemy course **“The Unreal Engine Developer Course”**, present
+- Udemy course **“Complete C# Unity Developer”** [Certificate of Completion](https://www.udemy.com/certificate/UC-ZBJAK2VK/)
+- Udemy course **“C# Intermediate: Classes, Interfaces and OOP”** [Certificate of Completion](https://www.udemy.com/certificate/UC-6F21RWL9/)
 
 ## EDUCATION
 - **B.A. Digital Media**, Baden-Wuerttemberg Cooperative State University Mannheim, 2009
