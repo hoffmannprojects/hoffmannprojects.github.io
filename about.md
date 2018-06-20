@@ -40,9 +40,10 @@ Highly proactive and creative professional with interdisciplinary education and 
 
 ## PROFESSIONAL DEVELOPMENT
 - Udemy course **"A Beginner's Guide To Machine Learning with Unity"**, present
-- Udemy course **“The Unreal Engine Developer Course”**, present
 - Udemy course **“Complete C# Unity Developer”** [Certificate of Completion](https://www.udemy.com/certificate/UC-ZBJAK2VK/)
+- Udemy course **“C# Advanced Topics: Take Your C# Skills to the Next Level”** [Certificate of Completion](https://www.udemy.com/certificate/UC-IUM2ENAY/)
 - Udemy course **“C# Intermediate: Classes, Interfaces and OOP”** [Certificate of Completion](https://www.udemy.com/certificate/UC-6F21RWL9/)
+- Udemy course **“The Unreal Engine Developer Course”**, present
 
 ## EDUCATION
 - **B.A. Digital Media**, Baden-Wuerttemberg Cooperative State University Mannheim, 2009
