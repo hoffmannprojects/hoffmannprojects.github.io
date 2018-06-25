@@ -13,7 +13,7 @@ summary: "This post has TL;DR character. Its purpose is to provide a quick 'how 
 
 # Installation
 
-## [Install the new Bash on Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10) 
+## [Install the new Bash on Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10){:target="_blank"} 
 (Requires Anniversary update, Windows build 16215, or later): 
 
 1. Open Powershell as administrator and run 
@@ -25,7 +25,7 @@ summary: "This post has TL;DR character. Its purpose is to provide a quick 'how 
 2. Select “Launch”, wait for installation to finish.
 2. Create new user account on Ubuntu (completely independent from the Windows user account).
 
-## [Install dependencies on Ubuntu](https://jekyllrb.com/docs/windows/#installation):
+## [Install dependencies on Ubuntu](https://jekyllrb.com/docs/windows/#installation){:target="_blank"}:
 1. (In the Ubuntu command prompt (bash)) Update repo list and packages: 
 ```bash
 sudo apt-get update -y && sudo apt-get upgrade -y
@@ -57,7 +57,7 @@ sudo apt autoremove
 ```
 
 ## (Optional) for better readability in bash: 
-[change bash colors and font](https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2)
+[change bash colors and font](https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2){:target="_blank"}
 
 
 ## Install Jekyll and other dependencies: 
@@ -80,7 +80,7 @@ gem 'github-pages', group: :jekyll_plugins
 bundle install
 ```
 
-5. If nokogiri installation results in error, try ([official Nokogiri installation instructions](http://www.nokogiri.org/tutorials/installing_nokogiri.html)):
+5. If nokogiri installation results in error, try ([official Nokogiri installation instructions](http://www.nokogiri.org/tutorials/installing_nokogiri.html){:target="_blank"}):
 ```
 sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev
 ```
@@ -96,7 +96,7 @@ jekyll -v
 
 ## (Optioinal) Install Node.Js and Gulp (required by the sleek theme, this website uses)
 
-1. Install Node version manager (nvm) via latest install command from [the official nvm github reposirotry](https://github.com/creationix/nvm).
+1. Install Node version manager (nvm) via latest install command from [the official nvm github reposirotry](https://github.com/creationix/nvm){:target="_blank"}.
 At the time of writing, the latest is: 
 ```bash
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
@@ -114,7 +114,7 @@ nvm install node
 ```
 5. cd into your repository.
 
-6. [Install gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) (If you've previously installed gulp globally, run npm rm --global gulp before following these instructions.):
+6. [Install gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md){:target="_blank"} (If you've previously installed gulp globally, run npm rm --global gulp before following these instructions.):
 ```bash
 npm install --global gulp-cli
 ```
