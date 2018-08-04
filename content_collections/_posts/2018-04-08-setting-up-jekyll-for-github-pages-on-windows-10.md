@@ -13,7 +13,7 @@ summary: "This post has TL;DR character. Its purpose is to provide a quick 'how 
 
 # Installation
 
-## [Install the new Bash on Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10){:target="_blank"} 
+## [If not already installed] [Install the new Bash on Ubuntu](https://docs.microsoft.com/en-us/windows/wsl/install-win10){:target="_blank"} 
 (Requires Anniversary update, Windows build 16215, or later): 
 
 1. Open Powershell as administrator and run 
@@ -25,42 +25,53 @@ summary: "This post has TL;DR character. Its purpose is to provide a quick 'how 
 2. Select “Launch”, wait for installation to finish.
 2. Create new user account on Ubuntu (completely independent from the Windows user account).
 
-## [Install dependencies on Ubuntu](https://jekyllrb.com/docs/windows/#installation){:target="_blank"}:
-1. (In the Ubuntu command prompt (bash)) Update repo list and packages: 
-```bash
-sudo apt-get update -y && sudo apt-get upgrade -y
-```
-2. Install optimized versions of Ruby for Ubuntu (confirm when prompted.):
-```bash
-sudo apt-add-repository ppa:brightbox/ruby-ng
-```
-```
-sudo apt-get update
-```
-```
-sudo apt-get install ruby2.3 ruby2.3-dev build-essential dh-autoreconf
-```
-
-3. Update Ruby gems:
-```bash
-sudo gem update
-```
-
-## Install Bundler (recommended by github):
-1. Install
-```bash
-sudo gem install bundler
-```
-2. Remove packages not needed:
-```bash
-sudo apt autoremove
-```
-
-## (Optional) for better readability in bash: 
+1. [Optional] for better readability in bash: 
 [change bash colors and font](https://medium.com/@jgarijogarde/make-bash-on-ubuntu-on-windows-10-look-like-the-ubuntu-terminal-f7566008c5c2){:target="_blank"}
 
+## [Install dependencies on Ubuntu](https://jekyllrb.com/docs/windows/#installation-via-bash-on-windows-10){:target="_blank"}:
+### [Install Ruby Version Manager (RVM)](https://github.com/rvm/ubuntu_rvm):
 
-## Install Jekyll and other dependencies: 
+1. Add the PPA and install the package
+```bash
+sudo apt-add-repository -y ppa:rael-gc/rvm
+sudo apt-get update
+sudo apt-get install rvm
+
+# Add user to rvm Group.
+sudo usermod -a -G rvm <userName>
+```
+
+2. Restart the system and close bash.
+
+3. Install Ruby via RVM:
+```
+rvm install 2.4
+rvm install 2.4-dev
+rvm install build-essential
+sudo apt install dh-autoreconf
+
+# Verify that Ruby was properly installed by printing the version number:
+ruby -v
+```
+
+**Note: Don't run ruby-related commands as `sudo` when rvm is installed!**
+
+### Update Gems, install jekyll and bundler:
+```
+# Update gems.
+gem update
+
+# Install jekyll and bundler.
+gem install jekyll bundler
+
+# Remove packages not needed.
+sudo apt autoremove
+
+# Check if Jekyll installed properly.
+jekyll -v
+```
+
+## Install other dependencies: 
 
 1. Create a new repository (or use an existing Jekyll repository) and cd into it.
 
@@ -80,60 +91,63 @@ gem 'github-pages', group: :jekyll_plugins
 bundle install
 ```
 
-5. If nokogiri installation results in error, try ([official Nokogiri installation instructions](http://www.nokogiri.org/tutorials/installing_nokogiri.html){:target="_blank"}):
+*If nokogiri installation results in error, try ([official Nokogiri installation instructions](http://www.nokogiri.org/tutorials/installing_nokogiri.html){:target="_blank"}):*
 ```
 sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev
-```
-```
-bundle install
-```
 
-5. Check if Jekyll installed properly:
-```bash
+bundle install
+
+# Check if Jekyll installed properly:
 jekyll -v
 ```
 
 
-## (Optioinal) Install Node.Js and Gulp (required by the sleek theme, this website uses)
+## [Optioinal] Install Node.Js and Gulp (required by the sleek theme, this website uses)
 
-1. Install Node version manager (nvm) via latest install command from [the official nvm github reposirotry](https://github.com/creationix/nvm){:target="_blank"}.
-At the time of writing, the latest is: 
+### Install Node version manager (nvm) via latest install command from [the official nvm github reposirotry](https://github.com/creationix/nvm){:target="_blank"}.
+
+1. At the time of writing, the latest is: 
 ```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 ```
 
 2. Restart bash.
 
 3. Confirm by checking:
 ```bash
-nvm version
+nvm --version
 ```
-4. Install node:
+
+### Install node:
 ```bash
 nvm install node
 ```
-5. cd into your repository.
 
-6. [Install gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md){:target="_blank"} (If you've previously installed gulp globally, run npm rm --global gulp before following these instructions.):
+
+### [Install gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md){:target="_blank"} (If you've previously installed gulp globally, run npm rm --global gulp before following these instructions.):
 ```bash
+# cd into your repository.
+cd <repository/path>
+
 npm install --global gulp-cli
-```
-```
-npm install --save-dev gulp@next
-```
 
-7. Inside the repository, run:
-```bash
+npm install --save-dev gulp@next
+
+# If you encounter warnings, run:
+# npm audit fix
+
+# Inside the repository, run:
 npm install
 ```
 
 # Troubleshooting
 
-## If `npm install` throws an error that it is missing python, run:
+## If `npm install` throws an error that it is missing python:
+Check my guide for installing python with a package manager or
+
 ``` 
 sudo apt install python
-```
-```
+
 npm install
 ```      
 
